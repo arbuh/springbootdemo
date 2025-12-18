@@ -1,9 +1,11 @@
 package io.github.arbuh.springbootdemo.service.distance;
 
 import io.github.arbuh.springbootdemo.model.Ride;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+@Service
 public class HaversineRideDistanceService implements RideDistanceService {
     private static final double EARTH_RADIUS_KM = 6371.0;
 
