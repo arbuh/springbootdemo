@@ -1,6 +1,6 @@
 package io.github.arbuh.springbootdemo.service.distance;
 
-import io.github.arbuh.springbootdemo.model.ride.Ride;
+import io.github.arbuh.springbootdemo.model.ride.RideRequest;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -10,11 +10,11 @@ public class HaversineRideDistanceService implements RideDistanceService {
     private static final double EARTH_RADIUS_KM = 6371.0;
 
     @Override
-    public BigDecimal calculateRideDistanceInKm(Ride ride) {
-        double lat1 = ride.start().latitude();
-        double lon1 = ride.start().longitude();
-        double lat2 = ride.end().latitude();
-        double lon2 = ride.end().longitude();
+    public BigDecimal calculateRideDistanceInKm(RideRequest rideRequest) {
+        double lat1 = rideRequest.start().latitude();
+        double lon1 = rideRequest.start().longitude();
+        double lat2 = rideRequest.end().latitude();
+        double lon2 = rideRequest.end().longitude();
 
         double lat1Rad = Math.toRadians(lat1);
         double lon1Rad = Math.toRadians(lon1);

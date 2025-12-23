@@ -1,6 +1,6 @@
 package io.github.arbuh.springbootdemo.service.cost;
 
-import io.github.arbuh.springbootdemo.model.ride.Ride;
+import io.github.arbuh.springbootdemo.model.ride.RideRequest;
 import io.github.arbuh.springbootdemo.model.ride.RideType;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +20,10 @@ public class CostStrategyFactory {
         this.luxuryCostCalculationStrategy = luxuryCostCalculationStrategy;
     }
 
-    public CostCalculationStrategy createStrategy(Ride ride) {
+    public CostCalculationStrategy createStrategy(RideRequest rideRequest) {
         CostCalculationStrategy costCalculationStrategy;
 
-        switch (ride.type()) {
+        switch (rideRequest.type()) {
             case RideType.STANDARD -> {
                 costCalculationStrategy = new StandardCostCalculationStrategy();
             }

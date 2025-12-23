@@ -1,6 +1,6 @@
 package io.github.arbuh.springbootdemo.service.cost;
 
-import io.github.arbuh.springbootdemo.model.ride.Ride;
+import io.github.arbuh.springbootdemo.model.ride.RideRequest;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -13,7 +13,7 @@ public class CostCalculator {
         this.strategy = strategy;
     }
 
-    public BigDecimal calculateCose(Ride ride) {
-        return this.strategy.calculateCost(ride);
+    public BigDecimal calculateCost(RideRequest rideRequest) {
+        return this.strategy.calculateCost(rideRequest);
     }
 }

@@ -1,9 +1,9 @@
 package io.github.arbuh.springbootdemo.service.cost;
 
-import io.github.arbuh.springbootdemo.model.ride.Ride;
+import io.github.arbuh.springbootdemo.model.ride.RideRequest;
 
 import java.math.BigDecimal;
 
 public interface CostCalculationStrategy {
-    public BigDecimal calculateCost(Ride ride);
+    public BigDecimal calculateCost(RideRequest rideRequest);
 }
