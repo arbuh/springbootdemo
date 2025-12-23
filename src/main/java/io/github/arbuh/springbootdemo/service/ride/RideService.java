@@ -1,6 +1,8 @@
 package io.github.arbuh.springbootdemo.service.ride;
 
+import io.github.arbuh.springbootdemo.model.Passenger;
 import io.github.arbuh.springbootdemo.model.driver.Driver;
+import io.github.arbuh.springbootdemo.model.ride.Ride;
 import io.github.arbuh.springbootdemo.model.ride.RideRequest;
 import io.github.arbuh.springbootdemo.service.cost.CostCalculationStrategy;
 import io.github.arbuh.springbootdemo.service.cost.CostCalculator;
@@ -26,7 +28,7 @@ public class RideService {
         this.costStrategyFactory = costStrategyFactory;
     }
 
-    public void process(RideRequest rideRequest) {
+    public void process(RideRequest rideRequest, Passenger passenger) {
         Optional<Driver> optionalDriver = this.matchService.matchWithDriver(rideRequest);
 
         if (optionalDriver.isEmpty()) {
@@ -40,5 +42,16 @@ public class RideService {
         costCalculator.setCostCalculationStrategy(strategy);
 
         BigDecimal cost = costCalculator.calculateCost(distance, driver.vehicle());
+
+        Ride.RideBuilder builder = new Ride.RideBuilder();
+        builder.setDriver(driver);
+        builder.setRideType(rideRequest.type());
+        builder.addPassenger(passenger);
+        builder.setDistance(distance);
+        builder.setCost(cost);
+
+        builder.build();
+
+        // TODO: save ride in repo
     }
 }
