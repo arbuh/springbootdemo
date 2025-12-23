@@ -39,6 +39,6 @@ public class RideService {
         CostCalculationStrategy strategy = costStrategyFactory.createStrategy(rideRequest);
         costCalculator.setCostCalculationStrategy(strategy);
 
-        BigDecimal cost = costCalculator.calculateCost(rideRequest);
+        BigDecimal cost = costCalculator.calculateCost(distance, driver.vehicle());
     }
 }
