@@ -1,9 +1,9 @@
 package io.github.arbuh.springbootdemo.service.match;
 
-import io.github.arbuh.springbootdemo.model.Driver;
-import io.github.arbuh.springbootdemo.model.DriverStatus;
+import io.github.arbuh.springbootdemo.model.driver.Driver;
+import io.github.arbuh.springbootdemo.model.driver.DriverStatus;
 import io.github.arbuh.springbootdemo.model.Location;
-import io.github.arbuh.springbootdemo.model.Ride;
+import io.github.arbuh.springbootdemo.model.ride.Ride;
 import io.github.arbuh.springbootdemo.model.vehicle.Car;
 import org.springframework.stereotype.Service;
 

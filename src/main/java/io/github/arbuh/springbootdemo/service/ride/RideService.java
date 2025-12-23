@@ -1,7 +1,7 @@
 package io.github.arbuh.springbootdemo.service.ride;
 
-import io.github.arbuh.springbootdemo.model.Driver;
-import io.github.arbuh.springbootdemo.model.Ride;
+import io.github.arbuh.springbootdemo.model.driver.Driver;
+import io.github.arbuh.springbootdemo.model.ride.Ride;
 import io.github.arbuh.springbootdemo.service.cost.CostCalculationStrategy;
 import io.github.arbuh.springbootdemo.service.cost.CostCalculator;
 import io.github.arbuh.springbootdemo.service.cost.CostStrategyFactory;

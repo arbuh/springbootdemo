@@ -1,6 +1,6 @@
 package io.github.arbuh.springbootdemo.service.distance;
 
-import io.github.arbuh.springbootdemo.model.Ride;
+import io.github.arbuh.springbootdemo.model.ride.Ride;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

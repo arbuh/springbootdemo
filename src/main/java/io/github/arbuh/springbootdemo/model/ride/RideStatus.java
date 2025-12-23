@@ -1,4 +1,4 @@
-package io.github.arbuh.springbootdemo.model;
+package io.github.arbuh.springbootdemo.model.ride;
 
 public enum RideStatus {
     PENDING,

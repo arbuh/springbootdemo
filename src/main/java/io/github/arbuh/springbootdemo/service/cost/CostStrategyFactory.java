@@ -1,7 +1,7 @@
 package io.github.arbuh.springbootdemo.service.cost;
 
-import io.github.arbuh.springbootdemo.model.Ride;
-import io.github.arbuh.springbootdemo.model.RideType;
+import io.github.arbuh.springbootdemo.model.ride.Ride;
+import io.github.arbuh.springbootdemo.model.ride.RideType;
 import org.springframework.stereotype.Service;
 
 @Service
